@@ -1,6 +1,7 @@
 require "capybara/rspec"
 require "./app"
 require "pry"
+require 'sinatra'
 require('spec_helper')
 
 Capybara.app = Sinatra::Application
