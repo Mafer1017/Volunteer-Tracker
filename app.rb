@@ -8,10 +8,8 @@ require("./db_access")
 also_reload('lib/**/*.rb')
 
 
-
-get ('/') do
-  @projects = Project.all
-  erb(:projects)
+get('/') do
+  redirect to('/projects')
 end
 
 get('/projects') do
@@ -22,9 +20,8 @@ end
 post('/projects') do
   title = params[:title]
   project = Project.new({:title => title, :id => nil})
-  project.save()
-  @projects = Project.all
-  erb(:projects)
+  project.save
+  redirect to('/projects')
 end
 
 get('/projects/new') do
