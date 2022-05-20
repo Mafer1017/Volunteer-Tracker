@@ -24,6 +24,11 @@ class Project
   def ==(project_to_compare)
     self.title() == project_to_compare.title()
   end
+
+  def self.clear
+    DB.exec("DELETE FROM projects *;")
+  end
+
   def self.find(id)
     project = DB.exec("SELECT * FROM projects WHERE id = #{id};").first
     if project
@@ -34,4 +39,16 @@ class Project
       nil
     end
   end
+
+  def update(attributes)
+    @title = attributes.fetch(:title)
+    @id = attributes.fetch(:id).to_i
+    DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id};")
+  end
+  
+  def delete
+    DB.exec("DELETE FROM projects WHERE id = #{@id};")
+    DB.exec("DELETE FROM volunteers WHERE project_id = #{@id};")
+  end
+  
 end
