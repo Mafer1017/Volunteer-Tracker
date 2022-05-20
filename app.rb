@@ -26,3 +26,7 @@ post('/projects') do
   @projects = Project.all
   erb(:projects)
 end
+
+get('/projects/new') do
+  erb(:new_project)
+end
