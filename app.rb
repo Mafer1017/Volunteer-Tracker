@@ -38,14 +38,14 @@ get('/projects/:id/edit') do
   erb(:edit_project)
 end
 
-patch('/albums/:id') do
+patch('/projects/:id') do
   @project = Project.find(params[:id].to_i())
-  @project.update(params[:name])
+  @project.update(params[:title])
   @projects = Project.all
   erb(:projects)
 end
 
-delete('/albums/:id') do
+delete('/projects/:id') do
   @project = Project.find(params[:id].to_i())
   @project.delete()
   @projects = Project.all
