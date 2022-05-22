@@ -28,9 +28,9 @@ _This project allows users to add projects and volunteers to projects on the sit
     `createdb volunteer_tracker`  
     `psql volunteer_tracker < database_backup.sql`  
     `createdb -T volunteer_tracker volunteer_tracker_test`
-* After building the database, enter the command 'rspec' into your terminal to confirm tests are all passing.
-* Enter 'ruby app.rb' into your terminal to run the repository with Sinatra.
-* Run live server in VSCode, open your browser and nagivate to 'http://localhost:4567/
+* After building the database, enter the command `rspec` into your terminal to confirm tests are all passing.
+* Enter `ruby app.rb` into your terminal to run the repository with Sinatra.
+* Run live server in VSCode, open your browser and nagivate to `http://localhost:4567/`
 
 
 ## Known Bugs
