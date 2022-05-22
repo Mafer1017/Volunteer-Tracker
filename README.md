@@ -1,4 +1,4 @@
-# Mr. Roboger's Neighborhood
+# Volunteer Tracker
 
 ##### By: Marcus Ferreira
 
@@ -18,7 +18,6 @@ _This project allows users to add projects and volunteers to projects on the sit
 * _Capybara_
 * _Postgres_
 * _SQL_
-* _SQL Designer_
 
 ## Setup/Installation Requirements
 
